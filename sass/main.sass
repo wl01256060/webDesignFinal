@@ -1,0 +1,217 @@
+@import "compass/css3"
+$title-big: 4rem
+$title-medium: 1.7rem
+$title-small: 1.2rem
+$font-size-button: 1.5rem
+$color-blue: rgb(1, 95, 167)
+$color-yellow: rgb(255, 239, 52)
+$color-dark-blue: rgb(0, 72, 127)
+$color-dark-yellow: rgb(221, 207,42)
+
+*
+	+box-sizing(border-box)
+	font-size: 100%
+	position: relative
+	//border: solid 1px black
+	font-family: "Microsoft JhengHei"
+
+
+.button
+	font-size: $font-size-button
+	color: white
+	text-align: center
+	padding: 8px 0px
+	+border-radius(5px)
+	width: 200px
+
+html, body
+	margin: 0px
+	padding: 0px
+
+.main-container
+	width: 100%
+
+nav
+	background-color: white
+	width: 100%
+	+box-shadow(0px 3px 5px rgba(#666, 0.3))
+	z-index: 999
+
+	ul
+		+display-flex
+		+align-items(center)
+		+justify-content(center)
+		font-size: 1rem
+		list-style: none
+		width: 100%
+		margin: 0
+		
+		li
+			display: inline-block
+			padding: 5px 15px
+			margin: 0px 50px
+			font-weight: 600
+
+			p
+				margin: 0px
+
+.logo
+	width: 100px
+	margin-top: 5px
+
+.home-up-container
+	+display-flex
+	width: 100%
+	background-image: url('../images/home-bg.jpg')
+	background-size: cover
+	position: relative
+	height: 87vh
+	justify-content: center
+	align-items: center
+
+	.float-container
+		width: 80%
+		height: 80vh
+
+		.title
+			font-size: 6vw
+			color: white
+			margin-left: 15%
+			margin-bottom: 0px
+			display: inline-block
+			position: absolute
+			z-index: 10
+
+		.title1
+			margin-top: 10%
+
+		.title2
+			margin-left: 25%
+			margin-top: 18%
+
+		.button-view-menu
+			background-color: $color-blue
+			margin-top: 35%
+			margin-left: 25%
+			border-bottom: solid 5px $color-dark-blue
+			display: inline-block
+
+
+		img
+			position: absolute
+
+		.layer0
+			width: 20%
+			left: 55%
+			top: 23%
+
+		.layer1
+			width: 35%
+			left: 55%
+			top: 40%
+
+		.layer2
+			width: 25%
+			left: 65%
+			top: 15%
+
+.home-down-container
+	width: 100%
+	background-image: url('../images/home-news-bg.jpg')
+
+	.title-container
+		margin: 0 auto
+		width: 50%
+		text-align: center
+		padding-top: 30px
+		padding-bottom: 20px 
+
+		.line
+			height: 3px
+			background-color: white
+			display: inline-block
+			width: 20%
+			transform: translateY(-8px)
+			margin: 0px 10px
+
+		h3
+			font-size: $title-medium
+			color: white
+			margin: 0
+			text-align: center
+			padding-top: 20px
+			display: inline-block
+
+	.card-container
+		+display-flex
+		+justify-content(space-between)
+		margin: 40px 100px
+
+		.card
+			+display-flex
+			+flex-wrap(wrap)
+			+justify-content(center)
+			width: 30%
+			background-color: white
+			min-width: 290px
+			+box-shadow(3px 3px 3px rgba(black, 0.5))
+
+			.card-img
+				margin: 20px 20px
+				height: 230px
+				width: 90%
+
+				img
+				width: 100%
+				overflow: hidden
+
+			.card-title
+				font-size: $title-small
+				font-weight: 600
+				width: 100%
+				text-align: center
+				padding: 5px 10px
+
+			.card-line
+				width: 30%
+				height: 5px
+				margin: 10px 0px
+				background-color: $color-yellow
+
+			.card-content
+				margin: 10px 20px
+				margin-bottom: 20px
+				font-size: 0.9rem
+				letter-spacing: 1px
+
+	.button-read-more
+		background-color: $color-yellow
+		margin: 0 auto
+		border-bottom: solid 5px $color-dark-yellow
+		margin-bottom: 50px
+		margin-top: 80px
+
+	.transparent
+		height: 30px
+
+footer
+	+display-flex
+	+justify-content(space-between)
+	align-items: center
+
+	.icon-container
+		width: 10%
+		margin: 10px 20px
+
+		img
+			width: 100%
+
+	.footer-right
+		display: inline-block
+		float: right
+		align-items: center
+
+		p
+			margin: 10px 20px
+			font-size: 0.8rem
+			text-align: right

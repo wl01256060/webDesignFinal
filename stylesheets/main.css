@@ -1,0 +1,266 @@
+/* line 11, ../sass/main.sass */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+  position: relative;
+  font-family: "Microsoft JhengHei";
+}
+
+/* line 19, ../sass/main.sass */
+.button {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 8px 0px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+/* line 27, ../sass/main.sass */
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* line 31, ../sass/main.sass */
+.main-container {
+  width: 100%;
+}
+
+/* line 34, ../sass/main.sass */
+nav {
+  background-color: white;
+  width: 100%;
+  -moz-box-shadow: 0px 3px 5px rgba(102, 102, 102, 0.3);
+  -webkit-box-shadow: 0px 3px 5px rgba(102, 102, 102, 0.3);
+  box-shadow: 0px 3px 5px rgba(102, 102, 102, 0.3);
+  z-index: 999;
+}
+/* line 40, ../sass/main.sass */
+nav ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1rem;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+}
+/* line 49, ../sass/main.sass */
+nav ul li {
+  display: inline-block;
+  padding: 5px 15px;
+  margin: 0px 50px;
+  font-weight: 600;
+}
+/* line 55, ../sass/main.sass */
+nav ul li p {
+  margin: 0px;
+}
+
+/* line 58, ../sass/main.sass */
+.logo {
+  width: 100px;
+  margin-top: 5px;
+}
+
+/* line 62, ../sass/main.sass */
+.home-up-container {
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  background-image: url("../images/home-bg.jpg");
+  background-size: cover;
+  position: relative;
+  height: 87vh;
+  justify-content: center;
+  align-items: center;
+}
+/* line 72, ../sass/main.sass */
+.home-up-container .float-container {
+  width: 80%;
+  height: 80vh;
+}
+/* line 76, ../sass/main.sass */
+.home-up-container .float-container .title {
+  font-size: 6vw;
+  color: white;
+  margin-left: 15%;
+  margin-bottom: 0px;
+  display: inline-block;
+  position: absolute;
+  z-index: 10;
+}
+/* line 85, ../sass/main.sass */
+.home-up-container .float-container .title1 {
+  margin-top: 10%;
+}
+/* line 88, ../sass/main.sass */
+.home-up-container .float-container .title2 {
+  margin-left: 25%;
+  margin-top: 18%;
+}
+/* line 92, ../sass/main.sass */
+.home-up-container .float-container .button-view-menu {
+  background-color: #015fa7;
+  margin-top: 35%;
+  margin-left: 25%;
+  border-bottom: solid 5px #00487f;
+  display: inline-block;
+}
+/* line 100, ../sass/main.sass */
+.home-up-container .float-container img {
+  position: absolute;
+}
+/* line 103, ../sass/main.sass */
+.home-up-container .float-container .layer0 {
+  width: 20%;
+  left: 55%;
+  top: 23%;
+}
+/* line 108, ../sass/main.sass */
+.home-up-container .float-container .layer1 {
+  width: 35%;
+  left: 55%;
+  top: 40%;
+}
+/* line 113, ../sass/main.sass */
+.home-up-container .float-container .layer2 {
+  width: 25%;
+  left: 65%;
+  top: 15%;
+}
+
+/* line 118, ../sass/main.sass */
+.home-down-container {
+  width: 100%;
+  background-image: url("../images/home-news-bg.jpg");
+}
+/* line 122, ../sass/main.sass */
+.home-down-container .title-container {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+/* line 129, ../sass/main.sass */
+.home-down-container .title-container .line {
+  height: 3px;
+  background-color: white;
+  display: inline-block;
+  width: 20%;
+  transform: translateY(-8px);
+  margin: 0px 10px;
+}
+/* line 137, ../sass/main.sass */
+.home-down-container .title-container h3 {
+  font-size: 1.7rem;
+  color: white;
+  margin: 0;
+  text-align: center;
+  padding-top: 20px;
+  display: inline-block;
+}
+/* line 145, ../sass/main.sass */
+.home-down-container .card-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 40px 100px;
+}
+/* line 150, ../sass/main.sass */
+.home-down-container .card-container .card {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 30%;
+  background-color: white;
+  min-width: 290px;
+  -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+/* line 159, ../sass/main.sass */
+.home-down-container .card-container .card .card-img {
+  margin: 20px 20px;
+  height: 230px;
+  width: 90%;
+  width: 100%;
+  overflow: hidden;
+}
+/* line 168, ../sass/main.sass */
+.home-down-container .card-container .card .card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  padding: 5px 10px;
+}
+/* line 175, ../sass/main.sass */
+.home-down-container .card-container .card .card-line {
+  width: 30%;
+  height: 5px;
+  margin: 10px 0px;
+  background-color: #ffef34;
+}
+/* line 181, ../sass/main.sass */
+.home-down-container .card-container .card .card-content {
+  margin: 10px 20px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+/* line 187, ../sass/main.sass */
+.home-down-container .button-read-more {
+  background-color: #ffef34;
+  margin: 0 auto;
+  border-bottom: solid 5px #ddcf2a;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+/* line 194, ../sass/main.sass */
+.home-down-container .transparent {
+  height: 30px;
+}
+
+/* line 197, ../sass/main.sass */
+footer {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  align-items: center;
+}
+/* line 202, ../sass/main.sass */
+footer .icon-container {
+  width: 10%;
+  margin: 10px 20px;
+}
+/* line 206, ../sass/main.sass */
+footer .icon-container img {
+  width: 100%;
+}
+/* line 209, ../sass/main.sass */
+footer .footer-right {
+  display: inline-block;
+  float: right;
+  align-items: center;
+}
+/* line 214, ../sass/main.sass */
+footer .footer-right p {
+  margin: 10px 20px;
+  font-size: 0.8rem;
+  text-align: right;
+}
