@@ -1,0 +1,56 @@
+$title-big: 4rem
+$title-medium: 1.7rem
+$title-small: 1.2rem
+$font-size-button: 1.5rem
+$color-blue: rgb(1, 95, 167)
+$color-yellow: rgb(255, 239, 52)
+$color-dark-blue: rgb(0, 72, 127)
+$color-dark-yellow: rgb(221, 207,42)
+
+*
+	+box-sizing(border-box)
+	font-size: 100%
+	position: relative
+	//border: solid 1px black
+	font-family: "Microsoft JhengHei"
+
+
+
+html, body
+	margin: 0px
+	padding: 0px
+
+a
+	text-decoration: none
+
+.button
+	font-size: $font-size-button
+	color: white
+	text-align: center
+	padding: 8px 0px
+	+border-radius(5px)
+	width: 15vw
+
+.title-container
+	margin: 0 auto
+	width: 50%
+	text-align: center
+	padding-top: 30px
+	padding-bottom: 20px 
+
+	.line
+		height: 3px
+		background-color: white
+		display: inline-block
+		width: 20%
+		transform: translateY(-8px)
+		margin: 0px 10px
+
+	h3
+		font-size: $title-medium
+		color: white
+		margin: 0
+		text-align: center
+		padding-top: 20px
+		display: inline-block
+		letter-spacing: 3px

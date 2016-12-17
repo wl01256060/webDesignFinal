@@ -1,0 +1,108 @@
+@import "compass/css3"
+@import "variable"
+
+.recom-container
+	background-color: $color-blue
+	+display-flex
+	+justify-content(center)
+	+align-items(center)
+	+flex-direction(column)
+
+	.title-container
+		width: 70%
+
+	.center-container
+		width: 70%
+		margin-top: 30px
+		margin-bottom: 50px
+
+		.recom-up
+			margin-right: 100px
+			+display-flex
+
+		.recom-drinks
+			width: 50%
+			+display-flex
+
+			.drink-img-container
+				width: 50%
+
+				.drink-img	
+					width: 100%
+				
+
+			.drink-content-container
+				width: 60%
+				+display-flex
+				+flex-wrap(wrap)
+				+align-content(center)
+
+				.drink-content 
+					width: 100%
+					color: white
+					letter-spacing: 2px
+					+translateX(-30px)
+
+				.drink-title-CH
+					font-size: $title-small
+
+				.drink-title-EN
+					color: $color-yellow
+					margin-top: 5px
+					font-size: .9rem
+
+				.drink-price
+					margin-top: 20px
+
+
+
+		.recom-down
+			margin-left: 100px
+			+display-flex
+			margin-top: 20px
+
+.menu-container
+	width: 100%
+	+display-flex
+	+flex-wrap(wrap)
+	+justify-content(center)
+
+	h3
+		font-size: $title-medium
+		margin: 0
+		text-align: center
+		padding-top: 20px
+		letter-spacing: 3px
+		width: 100%
+		margin-top: 10px
+
+	.menu-center-container
+		width: 70%
+		margin-top: 50px
+		margin-bottom: 40px
+
+		img
+			width: 100%
+
+	.menu-bg
+		position: absolute
+		width: 50%
+		opacity: 0.3
+		bottom: 0
+		right: 0
+
+.search-phone-container
+	background-image: url("../images/search-phone-bg.jpg")
+	background-size: cover
+	height: 200px
+	+display-flex
+	+justify-content(center)
+	+align-items(center)
+
+	.button-search-phone
+		background-color: $color-blue
+		border-bottom: solid 5px $color-dark-blue
+
+		&:active
+			border-bottom: 0px
+			border-top: solid 5px $color-dark-blue

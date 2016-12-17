@@ -1,35 +1,16 @@
 @import "compass/css3"
-$title-big: 4rem
-$title-medium: 1.7rem
-$title-small: 1.2rem
-$font-size-button: 1.5rem
-$color-blue: rgb(1, 95, 167)
-$color-yellow: rgb(255, 239, 52)
-$color-dark-blue: rgb(0, 72, 127)
-$color-dark-yellow: rgb(221, 207,42)
-
-*
-	+box-sizing(border-box)
-	font-size: 100%
-	position: relative
-	//border: solid 1px black
-	font-family: "Microsoft JhengHei"
-
-
-.button
-	font-size: $font-size-button
-	color: white
-	text-align: center
-	padding: 8px 0px
-	+border-radius(5px)
-	width: 200px
-
-html, body
-	margin: 0px
-	padding: 0px
+@import "menu"
+@import "variable"
 
 .main-container
 	width: 100%
+
+.show-up
+	+animation(show-up .8s)
+
+.show-down
+	+animation(show-down 1.5s ease-in)
+
 
 nav
 	background-color: white
@@ -52,8 +33,17 @@ nav
 			margin: 0px 50px
 			font-weight: 600
 
-			p
-				margin: 0px
+
+
+			a
+				text-decoration: none
+				color: black
+
+				&:hover
+					color: $color-blue
+
+				p
+					margin: 0px
 
 .logo
 	width: 100px
@@ -65,13 +55,13 @@ nav
 	background-image: url('../images/home-bg.jpg')
 	background-size: cover
 	position: relative
-	height: 87vh
+	height: 88vh
 	justify-content: center
 	align-items: center
 
 	.float-container
 		width: 80%
-		height: 80vh
+		height: 88vh
 
 		.title
 			font-size: 6vw
@@ -83,19 +73,22 @@ nav
 			z-index: 10
 
 		.title1
-			margin-top: 10%
+			margin-top: 15%
 
 		.title2
 			margin-left: 25%
-			margin-top: 18%
+			margin-top: 23%
 
 		.button-view-menu
 			background-color: $color-blue
-			margin-top: 35%
+			margin-top: 40%
 			margin-left: 25%
 			border-bottom: solid 5px $color-dark-blue
 			display: inline-block
 
+			&:active
+				border-bottom: 0px
+				border-top: solid 5px $color-dark-blue
 
 		img
 			position: absolute
@@ -104,43 +97,28 @@ nav
 			width: 20%
 			left: 55%
 			top: 23%
-
+			opacity: 0
+			+animation-delay(.5s)
+			+animation-fill-mode(forwards)
+			
 		.layer1
 			width: 35%
-			left: 55%
-			top: 40%
+			left: 53%
+			top: 50%
+			opacity: 0
+			+animation-delay(.3s)
+			+animation-fill-mode(forwards)
 
 		.layer2
 			width: 25%
 			left: 65%
 			top: 15%
+			opacity: 0
+			+animation-fill-mode(forwards)
 
 .home-down-container
 	width: 100%
 	background-image: url('../images/home-news-bg.jpg')
-
-	.title-container
-		margin: 0 auto
-		width: 50%
-		text-align: center
-		padding-top: 30px
-		padding-bottom: 20px 
-
-		.line
-			height: 3px
-			background-color: white
-			display: inline-block
-			width: 20%
-			transform: translateY(-8px)
-			margin: 0px 10px
-
-		h3
-			font-size: $title-medium
-			color: white
-			margin: 0
-			text-align: center
-			padding-top: 20px
-			display: inline-block
 
 	.card-container
 		+display-flex
@@ -155,6 +133,13 @@ nav
 			background-color: white
 			min-width: 290px
 			+box-shadow(3px 3px 3px rgba(black, 0.5))
+			+transition-duration(.3s)
+			cursor: pointer
+
+			&:hover
+				+translateY(-4px)
+				+box-shadow(3px 3px 10px rgba(black, 0.8))
+				+transition-duration(.3s)
 
 			.card-img
 				margin: 20px 20px
@@ -183,16 +168,24 @@ nav
 				margin-bottom: 20px
 				font-size: 0.9rem
 				letter-spacing: 1px
+	.button-container
+		width: 100%
+		+display-flex
+		+justify-content(center)
 
-	.button-read-more
-		background-color: $color-yellow
-		margin: 0 auto
-		border-bottom: solid 5px $color-dark-yellow
-		margin-bottom: 50px
-		margin-top: 80px
+		.button-read-more
+			background-color: $color-yellow
+			border-bottom: solid 5px $color-dark-yellow
+			margin-top: 80px
+			display: inline-block
+
+
+			&:active
+				border-bottom: 0px
+				border-top: solid 5px $color-dark-yellow
 
 	.transparent
-		height: 30px
+		height: 40px
 
 footer
 	+display-flex
@@ -200,8 +193,8 @@ footer
 	align-items: center
 
 	.icon-container
-		width: 10%
-		margin: 10px 20px
+		width: 6%
+		margin: 10px 30px
 
 		img
 			width: 100%
@@ -212,6 +205,29 @@ footer
 		align-items: center
 
 		p
-			margin: 10px 20px
+			margin: 2px 40px
 			font-size: 0.8rem
 			text-align: right
+
+
+@keyframes show-up
+	0%
+		transform: translateY(10px)
+		opacity: 0
+
+	100%
+		transform: translateY(0px)
+		opacity: 1
+
+@keyframes show-down
+	0%
+		transform: translateY(-25px)
+		opacity: 0
+
+	70%
+		transform: translateY(5px)
+		opacity: 0.7
+
+	100%
+		transform: translateY(0px)
+		opacity: 1
