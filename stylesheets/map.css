@@ -70,18 +70,23 @@ a:link {
 }
 
 /* line 4, ../sass/map.sass */
+#showup {
+  animation: up 1s;
+}
+
+/* line 7, ../sass/map.sass */
 .map-container {
   width: 100%;
   height: 87vh;
   display: -webkit-flex;
   display: flex;
 }
-/* line 9, ../sass/map.sass */
+/* line 12, ../sass/map.sass */
 .map-container .map-left {
   width: 40%;
   height: 100%;
 }
-/* line 13, ../sass/map.sass */
+/* line 16, ../sass/map.sass */
 .map-container .map-left .search-box {
   width: 100%;
   background-color: #015fa7;
@@ -93,8 +98,8 @@ a:link {
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 21, ../sass/map.sass */
-.map-container .map-left .search-box input {
+/* line 24, ../sass/map.sass */
+.map-container .map-left .search-box #address {
   background-color: #015fa7;
   color: white;
   width: 85%;
@@ -103,15 +108,15 @@ a:link {
   border-bottom: solid 1px white;
   margin-left: 20px;
 }
-/* line 30, ../sass/map.sass */
-.map-container .map-left .search-box input:focus {
+/* line 33, ../sass/map.sass */
+.map-container .map-left .search-box #address:focus {
   outline: none;
 }
-/* line 33, ../sass/map.sass */
-.map-container .map-left .search-box input::-webkit-input-placeholder {
+/* line 36, ../sass/map.sass */
+.map-container .map-left .search-box #address::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-/* line 36, ../sass/map.sass */
+/* line 39, ../sass/map.sass */
 .map-container .map-left .search-box .search-button {
   display: inline-block;
   width: 50px;
@@ -119,7 +124,7 @@ a:link {
   margin-right: 10px;
   cursor: pointer;
 }
-/* line 44, ../sass/map.sass */
+/* line 47, ../sass/map.sass */
 .map-container .map-left .search-box .search-button img {
   width: 25px;
   -moz-transform: translate(12px, 6px);
@@ -127,7 +132,7 @@ a:link {
   -webkit-transform: translate(12px, 6px);
   transform: translate(12px, 6px);
 }
-/* line 48, ../sass/map.sass */
+/* line 51, ../sass/map.sass */
 .map-container .map-left .store-container {
   background-color: #f2f2f2;
   display: -webkit-flex;
@@ -139,47 +144,47 @@ a:link {
   overflow: auto;
   height: 79vh;
 }
-/* line 56, ../sass/map.sass */
+/* line 59, ../sass/map.sass */
 .map-container .map-left .store-container::-webkit-scrollbar {
   width: 8px;
 }
-/* line 59, ../sass/map.sass */
+/* line 62, ../sass/map.sass */
 .map-container .map-left .store-container::-webkit-scrollbar-track {
   background-color: #f2f2f2;
 }
-/* line 62, ../sass/map.sass */
+/* line 65, ../sass/map.sass */
 .map-container .map-left .store-container::-webkit-scrollbar-thumb {
   background-color: rgba(1, 95, 167, 0.3);
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 66, ../sass/map.sass */
+/* line 69, ../sass/map.sass */
 .map-container .map-left .store-container::-webkit-scrollbar-thumb:hover {
   background-color: rgba(1, 95, 167, 0.5);
 }
-/* line 69, ../sass/map.sass */
+/* line 72, ../sass/map.sass */
 .map-container .map-left .store-container .store-content {
   width: 60%;
   margin-top: 50px;
 }
-/* line 75, ../sass/map.sass */
+/* line 78, ../sass/map.sass */
 .map-container .store {
   margin-bottom: 20px;
   border-bottom: solid 1px white;
   padding-bottom: 20px;
 }
-/* line 80, ../sass/map.sass */
+/* line 84, ../sass/map.sass */
 .map-container .store .store-title {
   font-weight: 600;
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
-/* line 85, ../sass/map.sass */
+/* line 89, ../sass/map.sass */
 .map-container .store .store-detial {
   margin-bottom: 5px;
 }
-/* line 90, ../sass/map.sass */
+/* line 94, ../sass/map.sass */
 .map-container .store .addr img {
   width: 15px;
   margin-left: 10px;
@@ -188,7 +193,7 @@ a:link {
   -webkit-transform: translateY(2px);
   transform: translateY(2px);
 }
-/* line 95, ../sass/map.sass */
+/* line 99, ../sass/map.sass */
 .map-container .store .addr:before {
   content: url("../images/place-icon.png");
   display: inline-block;
@@ -198,7 +203,7 @@ a:link {
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
 }
-/* line 101, ../sass/map.sass */
+/* line 105, ../sass/map.sass */
 .map-container .store .phone:before {
   content: url("../images/phone-icon.png");
   display: inline-block;
@@ -208,8 +213,19 @@ a:link {
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
 }
-/* line 110, ../sass/map.sass */
+/* line 114, ../sass/map.sass */
 .map-container .map-right {
   width: 60%;
   height: 100%;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
