@@ -1,0 +1,42 @@
+@import "compass/css3"
+@import "variable"
+
+.news-container
+	background-color: $color-blue
+
+	.card-container
+		+flex-wrap(wrap)
+
+		.card-up-container
+			+display-flex
+			+justify-content(space-between)
+
+		.card-down-container
+			+display-flex
+			+justify-content(space-between)
+			padding-top: 80px
+
+	.page-container
+		+display-flex
+		+justify-content(center)
+		margin-top: 80px
+
+		.choose-page
+			display: inline-block
+			background-color: white
+			width: 40px
+			height: 40px
+			text-align: center
+			padding-top: 8px
+			margin: 0px 5px
+			+transition-duration(.3s)
+			+box-shadow(3px 3px 3px rgba(black, 0.6))
+
+			&:hover
+				background-color: $color-yellow
+
+		.left-arrow
+			margin-right: 30px
+
+		.right-arrow
+			margin-left: 30px

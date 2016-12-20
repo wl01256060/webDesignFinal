@@ -1,15 +1,16 @@
 @import "compass/css3"
 @import "menu"
 @import "variable"
+@import "news"
 
 .main-container
 	width: 100%
 
 .show-up
-	+animation(show-up .8s)
+	+animation(show-up .8s ease-in)
 
 .show-down
-	+animation(show-down 1.5s ease-in)
+	+animation(show-down 1s ease-in)
 
 
 nav
@@ -120,72 +121,72 @@ nav
 	width: 100%
 	background-image: url('../images/home-news-bg.jpg')
 
-	.card-container
+.card-container
+	+display-flex
+	+justify-content(space-between)
+	margin: 40px 100px
+
+	.card
 		+display-flex
-		+justify-content(space-between)
-		margin: 40px 100px
-
-		.card
-			+display-flex
-			+flex-wrap(wrap)
-			+justify-content(center)
-			width: 30%
-			background-color: white
-			min-width: 290px
-			+box-shadow(3px 3px 3px rgba(black, 0.5))
-			+transition-duration(.3s)
-			cursor: pointer
-
-			&:hover
-				+translateY(-4px)
-				+box-shadow(3px 3px 10px rgba(black, 0.8))
-				+transition-duration(.3s)
-
-			.card-img
-				margin: 20px 20px
-				height: 230px
-				width: 90%
-
-				img
-				width: 100%
-				overflow: hidden
-
-			.card-title
-				font-size: $title-small
-				font-weight: 600
-				width: 100%
-				text-align: center
-				padding: 5px 10px
-
-			.card-line
-				width: 30%
-				height: 5px
-				margin: 10px 0px
-				background-color: $color-yellow
-
-			.card-content
-				margin: 10px 20px
-				margin-bottom: 20px
-				font-size: 0.9rem
-				letter-spacing: 1px
-	.button-container
-		width: 100%
-		+display-flex
+		+flex-wrap(wrap)
 		+justify-content(center)
+		width: 30%
+		background-color: white
+		min-width: 290px
+		+box-shadow(3px 3px 3px rgba(black, 0.5))
+		+transition-duration(.3s)
+		cursor: pointer
 
-		.button-read-more
+		&:hover
+			+translateY(-4px)
+			+box-shadow(3px 3px 10px rgba(black, 0.8))
+			+transition-duration(.3s)
+
+		.card-img
+			margin: 20px 20px
+			height: 230px
+			width: 90%
+
+			img
+			width: 100%
+			overflow: hidden
+
+		.card-title
+			font-size: $title-small
+			font-weight: 600
+			width: 100%
+			text-align: center
+			padding: 5px 10px
+
+		.card-line
+			width: 30%
+			height: 5px
+			margin: 10px 0px
 			background-color: $color-yellow
-			border-bottom: solid 5px $color-dark-yellow
-			margin-top: 80px
-			display: inline-block
+
+		.card-content
+			margin: 10px 20px
+			margin-bottom: 20px
+			font-size: 0.9rem
+			letter-spacing: 1px
+.button-container
+	width: 100%
+	+display-flex
+	+justify-content(center)
+
+	.button-read-more
+		background-color: $color-yellow
+		border-bottom: solid 5px $color-dark-yellow
+		margin-top: 80px
+		display: inline-block
 
 
-			&:active
-				border-bottom: 0px
-				border-top: solid 5px $color-dark-yellow
+		&:active
+			border-bottom: 0px
+			border-top: solid 5px $color-dark-yellow
 
-	.transparent
-		height: 40px
+.transparent
+	height: 40px
 
 footer
 	+display-flex
@@ -225,7 +226,7 @@ footer
 		opacity: 0
 
 	70%
-		transform: translateY(5px)
+		transform: translateY(10px)
 		opacity: 0.7
 
 	100%
