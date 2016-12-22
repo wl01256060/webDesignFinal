@@ -1,8 +1,13 @@
 @import "compass/css3"
 @import "variable"
 
-#showup
-	animation: up 1s
+.showup
+	animation: up .8s cubic-bezier(0.35, 0.96, 0.71, 1.49)
+	//transition-timing-function: cubic-bezier(0.35, 0.96, 0.71, 1.49)
+
+#mapInner
+	margin-bottom: 0
+	padding-bottom: 0
 
 .map-container
 	width: 100%
@@ -117,9 +122,15 @@
 
 @keyframes up
 	0%
-		transform: translateY(10px)
-		opacity: 0
+		transform: translateY(150px)
+		//opacity: 0
+
+	// 90% 
+	// 	transform: translateY(-30px)
+
+	// 95%
+	// 	transform: translateY(10px)
 
 	100%
 		transform: translateY(0px)
-		opacity: 1
+		//opacity: 1

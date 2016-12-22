@@ -28,6 +28,30 @@ a:visited
 a:link
 	text-decoration: none
 
+
+.nav:after
+	content: ''
+	position: absolute
+	width: 105%
+	left: -2px
+	bottom: -13px
+	height: 3px
+	transform: scaleX(0)
+	background-color: $color-blue
+	transition: all .2s ease
+	opacity: 0.6
+.nav:hover
+	color: $color-blue
+
+	&::after
+		transform: scaleX(1)
+
+.nav[data-active="on"]:after
+	transform: scaleX(1)
+.nav[data-active="on"]
+	color: $color-blue
+
+
 .button
 	font-size: $font-size-button
 	color: white
@@ -59,3 +83,4 @@ a:link
 		padding-top: 20px
 		display: inline-block
 		letter-spacing: 3px
+

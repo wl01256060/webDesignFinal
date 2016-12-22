@@ -9,6 +9,21 @@ $(document).ready(function(){
 
 })
 
+//nav
+var bodyClass = document.body.classList,
+    lastScrollY = 0;
+window.addEventListener('scroll', function(){
+  var st = this.scrollY;
+  // 判斷是向上捲動，而且捲軸超過 200px
+  if( st < lastScrollY) {
+    bodyClass.remove('hide');
+  }else{
+    bodyClass.add('hide');
+  }
+  lastScrollY = st;
+});
+
+
 var map;
 var markers = [];
 var infoWindows = [];
@@ -187,12 +202,12 @@ function initMap() {
     });
 
     for(let i=0; i<store.length; i++){
-    	infoContent[i] = '<div class="store">'+
+    	infoContent[i] = '<div class="store" id="mapInner">'+
 					'<div class="store-title">'+store[i].name+'</div>'+
 					'<div class="store-detial addr">'+store[i].addr+'<a href="'+store[i].link+'" target="_blank"><img src="images/open.png"></a></div>'+
 							'<div class="store-detial phone">'+store[i].phone+'</div></div>';
     	addMarker(i,store[i].name)
-    	$(".store-content").append('<div class="store" id="showup">'+
+    	$(".store-content").append('<div class="store showup">'+
 					'<div class="store-title">'+store[i].name+'</div>'+
 					'<div class="store-detial addr">'+store[i].addr+'<a href="'+store[i].link+'" target="_blank"><img src="images/open.png"></a></div>'+
 							'<div class="store-detial phone">'+store[i].phone+'</div></div>');
@@ -206,6 +221,7 @@ function initMap() {
     document.getElementById('submit').addEventListener("click", function() {
       $(".store-content").html(" ");
       var addrVal = $("#address").val();
+      $(".store").removeClass("showup")
 
       if(addrVal === "台大醫院" || addrVal === "臺大醫院"){
       	for(let i=0; i<8; i++){
@@ -216,7 +232,16 @@ function initMap() {
 		$(".store-content").append(infoContent[i]);
 			map.setCenter(ntuHsopital);
 			map.setZoom(15);
+			$(".store").addClass("showup")
+
+			
     	}
+
+    	var marker = new google.maps.Marker({
+						    position: ntuHsopital,
+						    map: map,
+						    title: "臺大醫院"
+						  });
       }else if(addrVal === "政大" || addrVal === "政治大學"){
       	for(let i=11; i<17; i++){
     	infoContent[i] = '<div class="store">'+
@@ -226,7 +251,14 @@ function initMap() {
 		$(".store-content").append(infoContent[i]);
 			map.setCenter(nccu);
 			map.setZoom(14);
+			$(".store").addClass("showup")
     	}
+    	var marker = new google.maps.Marker({
+						    position: nccu,
+						    map: map,
+						    title: "政治大學"
+						  });
+
       }else{
       	geocodeAddress(geocoder, map);
       }
@@ -248,7 +280,13 @@ function initMap() {
 					$(".store-content").append(infoContent[i]);
 						map.setCenter(ntuHsopital);
 						map.setZoom(15);
+						$(".store").addClass("showup")
 			    	}
+			    	var marker = new google.maps.Marker({
+						    position: ntuHsopital,
+						    map: map,
+						    title: "臺大醫院"
+						  });
 			      }else if(addrVal === "政大" || addrVal === "政治大學"){
 			      	for(let i=11; i<17; i++){
 			    	infoContent[i] = '<div class="store">'+
@@ -258,7 +296,15 @@ function initMap() {
 					$(".store-content").append(infoContent[i]);
 						map.setCenter(nccu);
 						map.setZoom(14);
+						$(".store").addClass("showup")
+						
 			    	}
+
+			    	var marker = new google.maps.Marker({
+						    position: nccu,
+						    map: map,
+						    title: "政治大學"
+						  });
 			      }else{
 			      	geocodeAddress(geocoder, map);
 			      }
