@@ -1,3 +1,5 @@
+
+var lightModel = $(".light-model");
 $(document).ready(function(){
 	$(".layer").addClass("show-down");
 	$(".title").addClass("show-up");
@@ -5,6 +7,19 @@ $(document).ready(function(){
 	$("#address").click(function(){
 	    this.select();
 	});
+
+	$(".card").click(function(){
+		lightModel.css("display", "flex");
+		lightModel.transition({opacity: 1});
+	})
+
+	$(".mask").click(function(){
+		lightModel.css("display", "none");
+		lightModel.transition({opacity: 0});
+	})
+
+
+
 
 
 })
