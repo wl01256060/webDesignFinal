@@ -1,0 +1,112 @@
+@import "compass/css3"
+@import "variable"
+
+.about-up-container
+	background: url("../images/about-1.jpg") no-repeat center top fixed
+	background-size: cover
+	height: 500px
+	+display-flex
+	+justify-content(center)
+	+align-items(center)
+	animation: smaller 2s ease-in-out
+
+	.center
+		margin-top: 80px
+		position: relative
+		+display-flex
+		+align-items(center)
+
+		.about-icon
+			width: 50px
+			display: inline-block
+			margin-right: 20px
+
+			img
+				width: 100%
+
+		.line
+			width: 5px
+			height: 55px
+			display: inline-block
+			border-right: solid 1.5px white
+			border-left: solid 1.5px white
+			margin-right: 6px
+
+		.about-slogan
+			color: white
+			font-size: 1.5rem
+			display: inline-block
+
+			p
+				font-family: "PMingLiU"
+				margin: 0
+
+
+.about-medium-container
+	+display-flex
+	+justify-content(center)
+	+flex-wrap(wrap)
+	background-color: rgb(245, 245, 245)
+
+	.line
+		background-color: $color-blue
+
+	h3
+		color: $color-blue
+
+	.about-content
+		width: 60%
+		margin-bottom: 60px
+		max-width: 1024px
+
+.about-big-container
+	background: url("../images/about-2.jpg") no-repeat fixed
+	background-size: cover
+	background-position: center
+	height: 400px
+	+display-flex
+	+justify-content(center)
+	+align-items(center)
+
+	.center
+		+display-flex
+		+justify-content(center)
+		+align-items(center)
+		width: 400px
+
+		.about-title
+			width: 7%
+			color: white
+			font-size: 1.2rem
+			line-height: 21px
+			margin-right: 10px
+			font-family: "PMingLiU"
+
+		.line
+			width: 5px
+			height: 100px
+			display: inline-block
+			border-right: solid 1.5px white
+			border-left: solid 1.5px white
+			margin-right: 10px
+
+
+		.content-container
+			width: 90%
+
+		.content
+			color: white
+			font-size: 1.2rem
+			font-family: "PMingLiU"
+
+		.content-1, .content-2
+			margin-bottom: 13px
+
+
+		
+
+@keyframes smaller 
+	0%
+		background-size: 130%
+	100%
+		background-size: 100%

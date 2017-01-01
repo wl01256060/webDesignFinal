@@ -2,15 +2,17 @@
 @import "menu"
 @import "variable"
 @import "news"
+@import "about"
+@import "map"
 
 .main-container
 	width: 100%
 
 .show-up
-	+animation(show-up .8s ease-in)
+	+animation(show-up .6s ease-in-out)
 
 .show-down
-	+animation(show-down 1.2s ease-in)
+	+animation(show-down 1s ease-in-out)
 
 .hide
 	nav
@@ -39,18 +41,20 @@ nav
 	ul
 		+display-flex
 		+align-items(center)
-		+justify-content(center)
+		+justify-content(space-between)
 		font-size: 1rem
 		list-style: none
 		width: 100%
 		margin: 0
 		margin-top: 8px
+		-webkit-padding-start: 0px
+		padding-right: 200px
+		padding-left: 200px
 		
 		.nav
 			text-decoration: none
 			color: black
 			display: inline-block
-			margin: 0px 80px
 			font-weight: 600
 
 			&:hover
@@ -77,10 +81,12 @@ nav
 	height: 88vh
 	justify-content: center
 	align-items: center
+	
 
 	.float-container
 		width: 80%
 		height: 88vh
+		max-width: 1024px
 
 		.title
 			font-size: 6vw
@@ -125,7 +131,7 @@ nav
 			left: 53%
 			top: 50%
 			opacity: 0
-			+animation-delay(.3s)
+			+animation-delay(.8s)
 			+animation-fill-mode(forwards)
 
 		.layer2
@@ -143,6 +149,7 @@ nav
 	+display-flex
 	+justify-content(space-between)
 	margin: 40px 100px
+	max-width: 1024px
 
 	.card
 		+display-flex
@@ -153,7 +160,7 @@ nav
 		min-width: 290px
 		+box-shadow(3px 3px 3px rgba(black, 0.5))
 		+transition-duration(.3s)
-		//cursor: pointer
+		cursor: pointer
 
 		&:hover
 			+translateY(-4px)
@@ -180,9 +187,10 @@ nav
 			padding: 5px 10px
 
 		.card-line
-			width: 30%
-			height: 5px
-			margin: 10px 0px
+			width: 20%
+			height: 3px
+			margin-top: 15px
+			margin-bottom: 10px
 			background-color: $color-yellow
 
 		.card-content

@@ -14,8 +14,8 @@ $(document).ready(function(){
 	})
 
 	$(".mask").click(function(){
-		lightModel.css("display", "none");
 		lightModel.transition({opacity: 0});
+		lightModel.transition({display: "none"});
 	})
 
 
@@ -29,7 +29,7 @@ var bodyClass = document.body.classList,
     lastScrollY = 0;
 window.addEventListener('scroll', function(){
   var st = this.scrollY;
-  // 判斷是向上捲動，而且捲軸超過 200px
+  
   if( st < lastScrollY) {
     bodyClass.remove('hide');
   }else{
@@ -63,6 +63,7 @@ var LatLng = [
 		{lat: 25.044810, lng: 121.516307},
 		{lat: 25.046067, lng: 121.514009},
 		{lat: 25.030985, lng: 121.517836},
+		{lat: 25.042431, lng: 121.513479},
 		{lat: 24.987384, lng: 121.550561},
 		{lat: 24.981929, lng: 121.561188},
 		{lat: 24.987067, lng: 121.568602},
@@ -258,7 +259,7 @@ function initMap() {
 						    title: "臺大醫院"
 						  });
       }else if(addrVal === "政大" || addrVal === "政治大學"){
-      	for(let i=11; i<17; i++){
+      	for(let i=12; i<17; i++){
     	infoContent[i] = '<div class="store">'+
 					'<div class="store-title">'+store[i].name+'</div>'+
 					'<div class="store-detial addr">'+store[i].addr+'<a href="'+store[i].link+'" target="_blank"><img src="images/open.png"></a></div>'+
@@ -303,7 +304,7 @@ function initMap() {
 						    title: "臺大醫院"
 						  });
 			      }else if(addrVal === "政大" || addrVal === "政治大學"){
-			      	for(let i=11; i<17; i++){
+			      	for(let i=12; i<17; i++){
 			    	infoContent[i] = '<div class="store">'+
 								'<div class="store-title">'+store[i].name+'</div>'+
 								'<div class="store-detial addr">'+store[i].addr+'<a href="'+store[i].link+'" target="_blank"><img src="images/open.png"></a></div>'+
@@ -417,3 +418,5 @@ function geocodeAddress(geocoder, resultsMap) {
     }
   });
 }
+
+

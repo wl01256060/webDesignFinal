@@ -9,12 +9,13 @@
 	+flex-direction(column)
 
 	.title-container
-		width: 70%
+		width: 60%
 
 	.center-container
-		width: 70%
+		width: 60%
 		margin-top: 30px
 		margin-bottom: 50px
+
 
 		.recom-up
 			margin-right: 100px
@@ -80,6 +81,8 @@
 		width: 70%
 		margin-top: 50px
 		margin-bottom: 40px
+		max-width: 1024px
+
 
 		img
 			width: 100%
@@ -106,3 +109,9 @@
 		&:active
 			border-bottom: 0px
 			border-top: solid 5px $color-dark-blue
+
+		&:before
+			content: url('../images/search-phone-icon.png')
+			display: inline-block
+			margin-right: 4px
+			transition-property: transform
