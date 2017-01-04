@@ -1,0 +1,328 @@
+@import "compass/css3"
+@import "menu"
+@import "variable"
+@import "news"
+@import "about"
+@import "map"
+
+.main-container
+	width: 100%
+
+.show-up
+	+animation(show-up .6s ease-in-out)
+
+.show-down
+	+animation(show-down 1s ease-in-out)
+
+.hide
+	nav
+		top: -80px
+
+.nav-clone
+	height: 80px
+	width: 100%	
+
+.bg-yellow
+	background-color: $color-yellow
+.bg-blue
+	background-color: $color-blue
+
+nav
+	background-color: white
+	width: 100%
+	+box-shadow(0px 3px 5px rgba(#666, 0.3))
+	z-index: 900
+	position: fixed
+	top: 0
+	transition: top .4s ease-in-out
+	height: 80px
+
+
+	ul
+		+display-flex
+		+align-items(center)
+		+justify-content(space-between)
+		font-size: 1rem
+		list-style: none
+		width: 100%
+		margin: 0
+		margin-top: 8px
+		-webkit-padding-start: 0px
+		padding-right: 200px
+		padding-left: 200px
+		
+		.nav
+			text-decoration: none
+			color: black
+			display: inline-block
+			font-weight: 600
+
+			&:hover
+				color: $color-blue
+
+			p
+				margin: 0px
+				font-weight: 400
+				line-height: 10px
+				
+
+
+
+.logo
+	width: 100px
+	margin-top: 5px
+
+.home-up-container
+	+display-flex
+	width: 100%
+	background-image: url('../images/home-bg.jpg')
+	background-size: cover
+	position: relative
+	height: 88vh
+	justify-content: center
+	align-items: center
+	
+
+	.float-container
+		width: 80%
+		height: 88vh
+		max-width: 1024px
+
+		.title
+			font-size: 6vw
+			color: white
+			margin-left: 15%
+			margin-bottom: 0px
+			display: inline-block
+			position: absolute
+			z-index: 10
+
+		.title1
+			margin-top: 15%
+
+		.title2
+			margin-left: 25%
+			margin-top: 23%
+
+		.button-view-menu
+			background-color: $color-blue
+			margin-top: 40%
+			margin-left: 25%
+			border-bottom: solid 5px $color-dark-blue
+			display: inline-block
+
+			&:active
+				border-bottom: 0px
+				border-top: solid 5px $color-dark-blue
+
+		img
+			position: absolute
+
+		.layer0
+			width: 20%
+			left: 55%
+			top: 23%
+			opacity: 0
+			+animation-delay(.5s)
+			+animation-fill-mode(forwards)
+			
+		.layer1
+			width: 35%
+			left: 53%
+			top: 50%
+			opacity: 0
+			+animation-delay(.8s)
+			+animation-fill-mode(forwards)
+
+		.layer2
+			width: 25%
+			left: 65%
+			top: 15%
+			opacity: 0
+			+animation-fill-mode(forwards)
+
+.home-down-container
+	width: 100%
+	background-image: url('../images/home-news-bg.jpg')
+	+display-flex
+	+flex-wrap(wrap)
+	+justify-content(center)
+
+
+.card-container
+	+display-flex
+	+justify-content(space-between)
+	margin: 40px 100px
+	max-width: 1024px
+	margin-left: 113px
+
+	.card
+		+display-flex
+		+flex-wrap(wrap)
+		+justify-content(center)
+		width: 30%
+		background-color: white
+		min-width: 290px
+		+box-shadow(3px 3px 3px rgba(black, 0.5))
+		+transition-duration(.3s)
+		cursor: pointer
+
+		&:hover
+			+translateY(-4px)
+			+box-shadow(3px 3px 10px rgba(black, 0.8))
+			+transition-duration(.3s)
+
+		.card-img
+			margin: 20px 20px
+			height: 230px
+			width: 90%
+			+display-flex
+			+justify-content(center)
+			max-width: 300px
+
+			img
+				width: 100%
+				overflow: hidden
+
+		.card-title
+			font-size: $title-small
+			font-weight: 600
+			width: 100%
+			text-align: center
+			padding: 5px 10px
+
+		.card-line
+			width: 20%
+			height: 3px
+			margin-top: 15px
+			margin-bottom: 10px
+			background-color: $color-yellow
+
+		.card-content
+			margin: 10px 20px
+			margin-bottom: 20px
+			font-size: 0.9rem
+			letter-spacing: 1px
+.button-container
+	width: 100%
+	+display-flex
+	+justify-content(center)
+
+	.button-read-more
+		background-color: $color-yellow
+		border-bottom: solid 5px $color-dark-yellow
+		margin-top: 80px
+		display: inline-block
+		margin-bottom: 50px
+
+
+		&:active
+			border-bottom: 0px
+			border-top: solid 5px $color-dark-yellow
+
+.transparent
+	height: 40px
+
+.light-model
+	position: fixed
+	width: 100%
+	height: 100vh
+	z-index: 999
+	top: 0
+	left: 0
+	+display-flex
+	+justify-content(center)
+	+align-items(center)
+	display: none
+	opacity: 0
+	transition: .5s
+
+	.mask
+		position: absolute
+		width: 100%
+		height: 100%
+		background-color: rgba(black, 0.8)
+
+	.light-container
+		width: 720px
+		height: 500px
+		background-color: white
+		+display-flex
+		+align-items(center)
+
+		.light-img
+			width: 60%
+			display: inline-block
+			margin: 40px 20px
+
+			img
+				width: 100%
+
+		.light-content
+			width: 40%
+			display: inline-block
+			margin: 40px 20px
+			margin-left: 0px
+			position: relative
+
+			.delete
+				position: absolute
+				top: 0
+
+			.light-title
+				font-size: $title-medium
+				margin-bottom: 20px
+
+			.light-text
+				margin-bottom: 10px
+
+			.light-time
+				text-align: right
+				margin-bottom: 10px
+			.share
+				width: 100%
+
+footer
+	+display-flex
+	+justify-content(space-between)
+	align-items: center
+
+	.icon-container
+		width: 6%
+		margin: 10px 30px
+
+		img
+			width: 100%
+
+	.footer-right
+		display: inline-block
+		float: right
+		align-items: center
+
+		p
+			margin: 2px 40px
+			font-size: 0.8rem
+			text-align: right
+
+
+@keyframes show-up
+	0%
+		transform: translateY(10px)
+		opacity: 0
+
+	100%
+		transform: translateY(0px)
+		opacity: 1
+
+@keyframes show-down
+	0%
+		transform: translateY(-25px)
+		opacity: 0
+
+	// 70%
+	// 	transform: translateY(10px)
+	// 	opacity: 0.7
+
+	100%
+		transform: translateY(0px)
+		opacity: 1
